@@ -9,21 +9,23 @@
 
 
 
-`AliSMS` is a vapor 4 kit of alibab cloud sms service. It support macOS, Ubuntu. You can use the kit to call alibab cloud sms service. 
+`AliSMS` 是一个基于vapor4的阿里云短信服务框架。支持 macOS, Ubuntu。
 
-Thank you supporting and using vapor, we are growing.
+感谢你支持并使用vapor。vapor正在成长
 
-## Installation
+[English 📔](README.md)
+
+## 安装
 
 ### Swift Package Manager
 
-To integrate using Apple's Swift package manager, add the following as a dependency to your `Package.swift`:
+要使用苹果的 Swift Package Manager 集成，将以下内容作为依赖添加到你的 `Package.swift`：
 
 ```swift
 .package(url: "https://github.com/SpectatorNanWithZZC/vapor-alisms.git", from: "1.0.0-rc")
 ```
 
-Here's an example `PackageDescription`:
+这里是一个 `PackageDescription` 实例：
 
 ```swift
 // swift-tools-version:5.2
@@ -59,7 +61,7 @@ let package = Package(
 )
 ```
 
-## Usage
+## 使用
 
 ```swift
         let client = AlismsClient(scheme: "https", accessKeyId: "key", accessKeySecret: "secret")
