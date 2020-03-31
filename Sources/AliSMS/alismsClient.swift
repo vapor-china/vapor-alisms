@@ -8,9 +8,9 @@
 import Foundation
 
 public struct AlismsClient {
-    public init(scheme: String, regionId: String, accessKeyId: String, accessKeySecret: String) {
+    public init(scheme: String = "https", accessKeyId: String, accessKeySecret: String) {
         self.scheme = scheme
-        self.regionId = regionId
+        self.regionId = AliSmsDefault.regionId
         self.accessKeyId = accessKeyId
         self.accessKeySecret = accessKeySecret
     }
