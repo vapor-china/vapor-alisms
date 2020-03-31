@@ -12,13 +12,13 @@ let package = Package(
         .library(name: "AliSMS", targets: ["AliSMS"])
     ],
     dependencies: [
-        .package(url: "https://github.com/vapor/vapor.git", from: "4.0.0-rc"),
-        .package(url: "https://github.com/krzyzanowskim/CryptoSwift.git", from: "1.3.0")
+        .package(url: "https://github.com/vapor/vapor.git", from: "4.0.0-rc")
+//        .package(url: "https://github.com/krzyzanowskim/CryptoSwift.git", from: "1.3.0")
     ],
     targets: [
         .target(name: "AliSMS", dependencies: [
-            .product(name: "Vapor", package: "vapor"),
-            .product(name: "CryptoSwift", package: "CryptoSwift")
+            .product(name: "Vapor", package: "vapor")
+//            .product(name: "CryptoSwift", package: "CryptoSwift")
         ])
     ]
 )
