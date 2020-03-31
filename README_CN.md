@@ -22,7 +22,7 @@
 要使用苹果的 Swift Package Manager 集成，将以下内容作为依赖添加到你的 `Package.swift`：
 
 ```swift
-.package(url: "https://github.com/SpectatorNanWithZZC/vapor-alisms.git", from: "1.0.0-rc")
+.package(url: "https://github.com/SpectatorNanWithZZC/vapor-alisms.git", from: "1.0.0")
 ```
 
 这里是一个 `PackageDescription` 实例：
@@ -43,7 +43,7 @@ let package = Package(
         .package(url: "https://github.com/vapor/vapor.git", from: "4.0.0-rc"),
         .package(url: "https://github.com/vapor/fluent.git", from: "4.0.0-rc"),
         .package(url: "https://github.com/vapor/fluent-mysql-driver.git", from: "4.0.0-rc"),
-        .package(url: "https://github.com/SpectatorNanWithZZC/vapor-alisms.git", from: "1.0.0-rc")
+        .package(url: "https://github.com/SpectatorNanWithZZC/vapor-alisms.git", from: "1.0.0")
     ],
     targets: [
         .target(name: "App", dependencies: [

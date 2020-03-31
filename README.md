@@ -22,7 +22,7 @@ Thank you supporting and using vapor, we are growing.
 To integrate using Apple's Swift package manager, add the following as a dependency to your `Package.swift`:
 
 ```swift
-.package(url: "https://github.com/SpectatorNanWithZZC/vapor-alisms.git", from: "1.0.0-rc")
+.package(url: "https://github.com/SpectatorNanWithZZC/vapor-alisms.git", from: "1.0.0")
 ```
 
 Here's an example `PackageDescription`:
@@ -43,7 +43,7 @@ let package = Package(
         .package(url: "https://github.com/vapor/vapor.git", from: "4.0.0-rc"),
         .package(url: "https://github.com/vapor/fluent.git", from: "4.0.0-rc"),
         .package(url: "https://github.com/vapor/fluent-mysql-driver.git", from: "4.0.0-rc"),
-        .package(url: "https://github.com/SpectatorNanWithZZC/vapor-alisms.git", from: "1.0.0-rc")
+        .package(url: "https://github.com/SpectatorNanWithZZC/vapor-alisms.git", from: "1.0.0")
     ],
     targets: [
         .target(name: "App", dependencies: [
