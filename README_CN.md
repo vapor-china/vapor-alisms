@@ -13,8 +13,6 @@
 
 Thank you supporting and using vapor, we are growing.
 
-[中文版🇨🇳](README_CN.md)
-
 ## Installation
 
 ### Swift Package Manager
