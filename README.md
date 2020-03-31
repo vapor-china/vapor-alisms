@@ -69,6 +69,10 @@ let package = Package(
         try client.sendSms(code: SMSCode(code: "123456"), phone: "13812341234", signName: "you sign name", templateCode: "you template code", req: req)
 ```
 
+## Features
+
+ Send Batch SMS
+
 ## License
 
 Moya is released under an MIT license. See [License.md](https://github.com/SpectatorNanWithZZC/vapor-alisms/blob/master/LICENSE) for more information.
