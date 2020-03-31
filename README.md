@@ -75,4 +75,4 @@ let package = Package(
 
 ## License
 
-Moya is released under an MIT license. See [License.md](https://github.com/SpectatorNanWithZZC/vapor-alisms/blob/master/LICENSE) for more information.
+AliSMS is released under an MIT license. See [License.md](https://github.com/SpectatorNanWithZZC/vapor-alisms/blob/master/LICENSE) for more information.
