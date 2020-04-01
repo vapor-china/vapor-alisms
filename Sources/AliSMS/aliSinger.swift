@@ -7,11 +7,11 @@
 
 import Vapor
 //import CryptoSwift
-//#if os(Linux)
-//import OpenCrypto
-//#else
+#if os(Linux)
+import Crypto
+#else
 import CryptoKit
-//#endif
+#endif
 
 struct SHAHAMC1Singer: AliSign {
     
