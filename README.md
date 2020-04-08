@@ -1,6 +1,6 @@
 <img src="images/banner.png"/>
 
-[![Build Status](https://img.shields.io/badge/platforms-macOS%20%7C%20Ubuntu-green.svg)](https://github.com/Jinxiansen/SwiftUI)
+[![Build Status](https://img.shields.io/badge/platforms-macOS%20%7C%20Ubuntu-green.svg)](https://github.com/vapor-china/vapor-alisms)
 [![Swift](https://img.shields.io/badge/Swift-5.2-orange.svg)](https://swift.org)
 [![Swift](https://img.shields.io/badge/Vapor-4-orange.svg)](https://vapor.codes)
 [![Xcode](https://img.shields.io/badge/Xcode-11.4-blue.svg)](https://developer.apple.com/xcode)
@@ -10,8 +10,6 @@
 
 
 `AliSMS` is a vapor 4 kit of alibab cloud sms service. It support macOS, Ubuntu. You can use the kit to call alibab cloud sms service. 
-
-Thank you supporting and using vapor, we are growing.
 
 [中文版🇨🇳](README_CN.md)
 
@@ -75,4 +73,4 @@ let package = Package(
 
 ## License
 
-AliSMS is released under an MIT license. See [License.md](https://github.com/SpectatorNanWithZZC/vapor-alisms/blob/master/LICENSE) for more information.
+AliSMS is released under an MIT license. See [License.md](https://github.com/vapor-china/vapor-alisms/blob/master/LICENSE) for more information.
