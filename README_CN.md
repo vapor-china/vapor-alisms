@@ -22,7 +22,7 @@
 要使用苹果的 Swift Package Manager 集成，将以下内容作为依赖添加到你的 `Package.swift`：
 
 ```swift
-.package(url: "https://github.com/SpectatorNanWithZZC/vapor-alisms.git", from: "1.0.0")
+.package(url: "https://github.com/vapor-china/vapor-alisms.git", from: "1.0.1")
 ```
 
 这里是一个 `PackageDescription` 实例：
