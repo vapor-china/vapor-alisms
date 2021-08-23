@@ -4,7 +4,7 @@
 [![Swift](https://img.shields.io/badge/Swift-5.2-orange.svg)](https://swift.org)
 [![Swift](https://img.shields.io/badge/Vapor-4-orange.svg)](https://vapor.codes)
 [![Xcode](https://img.shields.io/badge/Xcode-11.4-blue.svg)](https://developer.apple.com/xcode)
-[![Xcode](https://img.shields.io/badge/macOS-15.0-blue.svg)](https://developer.apple.com/macOS)
+[![Xcode](https://img.shields.io/badge/macOS-10-blue.svg)](https://developer.apple.com/macOS)
 [![MIT](https://img.shields.io/badge/licenses-MIT-red.svg)](https://opensource.org/licenses/MIT)
 
 
@@ -41,7 +41,7 @@ let package = Package(
         .package(url: "https://github.com/vapor/vapor.git", from: "4.0.0-rc"),
         .package(url: "https://github.com/vapor/fluent.git", from: "4.0.0-rc"),
         .package(url: "https://github.com/vapor/fluent-mysql-driver.git", from: "4.0.0-rc"),
-        .package(url: "https://github.com/SpectatorNanWithZZC/vapor-alisms.git", from: "1.0.0")
+        .package(url: "https://github.com/vapor-china/vapor-alisms.git", from: "1.0.0")
     ],
     targets: [
         .target(name: "App", dependencies: [
