@@ -33,7 +33,7 @@ extension AlismsClient {
         do {
             return try request(phone: phone, signName: signName, templateCode: templateCode, templateParam: param, outId: "", req: req)
         } catch let e {
-            print(e)
+            req.logger.error("sendSms:\(e.localizedDescription)")
             return AliResponseStatusCode.unkown.encodeResponse(for: req).map { _ in .unkown }
         }
     }
@@ -68,7 +68,7 @@ extension AlismsClient {
                                         TemplateParam: templateParam,
                                         OutId: outId)
         
-        let requestUrl = try generateUrl(param: container, signer: SHAHAMC1Singer())
+        let requestUrl = generateUrl(param: container, signer: SHAHAMC1Singer())
 
         let uri = URI.init(string: requestUrl)
         let resp = req.client.get(uri)
@@ -101,35 +101,34 @@ extension AlismsClient {
     
 
     
-    func generateUrl(param: AliSmsContainer, signer: SHAHAMC1Singer) throws -> String {
+    func generateUrl(param: AliSmsContainer, signer: SHAHAMC1Singer) -> String {
         
         let dic = MirrorExt.generateDic(model: param)
-        
+
         let dic2 = dic.sorted { (k1, k2) -> Bool in
             return k1.key < k2.key
         }
-        
+
         var queryString = ""
-        
+
         for (k,v) in dic2 {
             queryString = queryString + "&" + k.aliSpecialUrlEncode() + "=" + v.aliSpecialUrlEncode()
         }
-        
+
         let signQuery = String(queryString.dropFirst(1))
-        
-        var sign = ""
-        
-        sign = "GET" + "&" + "/".aliSpecialUrlEncode() + "&" + signQuery.aliSpecialUrlEncode()
-        
+
+        let sign = "GET" + "&" + "/".aliSpecialUrlEncode() + "&" + signQuery.aliSpecialUrlEncode()
+
         let key = accessKeySecret+"&"
-        
-        let signature = try signer.sign(sign, key: key)
-        
-        var url = ""
-        
+
+        let signature = signer.sign(sign, key: key)
+
+        var characters = CharacterSet.urlQueryAllowed
+        characters.remove(charactersIn: "!*'\"();:@&=+$,/?%#[]% ")
+
         //get
-        url = requestDomain + "/?Signature=" + signature + queryString
-        
+        let url = requestDomain + "/?Signature=" + (signature.addingPercentEncoding(withAllowedCharacters: characters) ?? signature) + queryString
+
         return url
     }
     
